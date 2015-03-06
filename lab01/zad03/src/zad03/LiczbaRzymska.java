@@ -2,36 +2,36 @@ package zad03;
 
 public class LiczbaRzymska {
 
-	private int arabic;
+	private int podanaLiczba;
 	
 	LiczbaRzymska(int liczba){	
-		this.arabic=liczba;
+		this.podanaLiczba=liczba;
 	}
 	
 	
-	public static final int[] decimal = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
-	public static final String[] letters = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
+	public static final int[] arabskie = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+	public static final String[] rzymskie = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
 	
 	public String toString() {
-	    String roman = "";
+	    String rzymskaZapis = "";
 
-	    if (arabic < 1 || arabic > 3999) {
-	        System.out.println(arabic + " <-- Nie ma takiej liczby rzymskiej");
+	    if (podanaLiczba < 1 || podanaLiczba > 3999) {
+	        System.out.println(podanaLiczba + " <-- Nie ma takiej liczby rzymskiej");
 	        return null;
 	    }
 
-	    while (arabic > 0) {
-	        int maxFound = 0;
-	        for (int i=0; i < decimal.length; i++) {
-	            if (arabic >= decimal[i]) {
-	                maxFound = i;
+	    while (podanaLiczba > 0) {
+	        int pasujacaRzymska = 0;
+	        for (int i=0; i < arabskie.length; i++) {
+	            if (podanaLiczba >= arabskie[i]) {
+	            	pasujacaRzymska = i;
 	            }
 	        }
-	        roman += letters[maxFound];
-	        arabic -= decimal[maxFound];
+	        rzymskaZapis = rzymskaZapis + rzymskie[pasujacaRzymska];
+	        podanaLiczba = podanaLiczba - arabskie[pasujacaRzymska];
 	    }
 
-	    return roman;       
+	    return rzymskaZapis;       
 	}	
 	
 }
