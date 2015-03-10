@@ -1,13 +1,8 @@
-package zad04;
+package lab02;
 
-import java.util.LinkedList;
-import java.util.Random;
 import java.util.Random;
 
-import zad04.NieudanyPsikusException;
-import zad04.Psikus;
-
-public class GraLab02 implements Psikus {
+public class PsikusImplemetation implements Psikus {
 
 	@Override
 	public Integer cyfrokrad(Integer liczba) {

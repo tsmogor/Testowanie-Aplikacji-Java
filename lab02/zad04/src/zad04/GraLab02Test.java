@@ -24,23 +24,21 @@ public class GraLab02Test {
 	public void CyfrokradTest2(){
 		GraLab02 psikus = new GraLab02();
 		int number = 0;
-		int actual = psikus.cyfrokrad(number);
-		assertNull("should be null", actual);
+		assertNull("should be null", psikus.cyfrokrad(number));
 	}
 	
 	@Test
 	public void CyfrokradTest3(){
 		GraLab02 psikus = new GraLab02();
 		int number = 9;
-		int actual = psikus.cyfrokrad(number);
-		assertNull("should be null", actual);
+		assertNull("should be null", psikus.cyfrokrad(number));
 	}
 	
 	@Test
 	public void CyfrokradTest4(){
 		GraLab02 psikus = new GraLab02();
 		int number = 10;
-		int actual = psikus.cyfrokrad(number);
+		int actual = psikus.cyfrokrad(number).intValue();
 		assertNotNull("shouldn't be null", actual);
 	}
 	
@@ -48,7 +46,7 @@ public class GraLab02Test {
 	public void CyfrokradTest5(){
 		GraLab02 psikus = new GraLab02();
 		int number = 56;
-		int actual = psikus.cyfrokrad(number);
+		int actual = psikus.cyfrokrad(number).intValue();
 		assertThat("should be equal", actual==5 || actual==6);
 	}
 	
@@ -63,7 +61,7 @@ public class GraLab02Test {
 	@Test
 	public void HultajchochlaTest() throws NieudanyPsikusException{
 		GraLab02 psikus = new GraLab02();
-		int number = 12343211;
+		int number = 12345678;
 		int actual = psikus.hultajchochla(number);
 		assertNotEquals(number,actual);
 	}
@@ -101,7 +99,7 @@ public class GraLab02Test {
 	public void NieksztalekTest2(){
 		GraLab02 psikus = new GraLab02();
 		int actual = psikus.nieksztaltek(77);
-		assertThat("Should be equal",actual==71 || actual==17);
+		assertThat("Should be equal " + actual,actual==71 || actual==17);
 	}
 	
 	@Test
@@ -132,7 +130,7 @@ public class GraLab02Test {
 	public void NieksztalekTest6(){
 		GraLab02 psikus = new GraLab02();
 		int actual = psikus.nieksztaltek(1234567890);
-		assertThat("Should be equal",actual==1234561890 || actual==1284567890 || actual==1234597890);
+		assertThat("Should be equal" + actual,actual==1234561890 || actual==1284567890 || actual==1234597890);
 	}
 	
 }
