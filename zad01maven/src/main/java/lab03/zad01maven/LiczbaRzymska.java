@@ -1,4 +1,4 @@
-package zad03;
+package lab03.zad01maven;
 
 public class LiczbaRzymska {
 

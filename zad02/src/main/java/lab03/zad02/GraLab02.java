@@ -19,25 +19,8 @@ public class GraLab02 implements Psikus {
 		String liczbaString = Integer.toString(liczba);	
 		
 		int length = liczbaString.length();	
-		if(liczba<0 && length>2){
-			StringBuilder sb = new StringBuilder(liczbaString);
-			
-			int kasowana = generator.nextInt(1000) % length;
-			while(kasowana == 0){
-				kasowana = generator.nextInt(1000) % length;
-			}
-			if(kasowana!=0){
-				sb.deleteCharAt(kasowana);
-			}
-			
-			String resultString = sb.toString();
 		
-			int nowaLiczba = Integer.parseInt(resultString); 
-		
-			return nowaLiczba;
-		}
-		
-		else if(length>1 && liczba>9){
+		if(length>1){
 		
 			StringBuilder sb = new StringBuilder(liczbaString);
 			sb.deleteCharAt(losowa % length);
@@ -63,36 +46,7 @@ public class GraLab02 implements Psikus {
 		
 		int length = liczbaString.length();	
 		
-		if(liczba<0 && length>2){
-			StringBuilder sb = new StringBuilder(liczbaString); 
-			int pierwszaLosowa = losowa % length;
-			
-			while(pierwszaLosowa == 0){
-				pierwszaLosowa = generator.nextInt(1000) % length;
-			}
-			
-			char temp = sb.charAt(pierwszaLosowa); 
-
-			int drugaLosowa = losowa2 % length; 
-			
-			
-			
-			while(pierwszaLosowa == drugaLosowa || drugaLosowa == 0){
-				drugaLosowa = generator.nextInt(1000) % length;
-			}
-			char temp2 = sb.charAt(drugaLosowa); 
-
-			sb.setCharAt(pierwszaLosowa, temp2);
-			sb.setCharAt(drugaLosowa, temp);
-			String resultString = sb.toString();
-		
-			int nowaLiczba = Integer.parseInt(resultString); 
-		
-			return nowaLiczba;
-			
-		}
-		
-		else if(length>1 && liczba>9){
+		if(length>1){
 		
 			StringBuilder sb = new StringBuilder(liczbaString); 
 			int pierwszaLosowa = losowa % length;

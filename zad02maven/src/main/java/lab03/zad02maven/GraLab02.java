@@ -1,15 +1,15 @@
-package zad04;
+package lab03.zad02maven;
 
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Random;
 
-import zad04.NieudanyPsikusException;
-import zad04.Psikus;
+import lab03.zad02maven.NieudanyPsikusException;
+import lab03.zad02maven.Psikus;
 
 public class GraLab02 implements Psikus {
 
-	@Override
+
 	public Integer cyfrokrad(Integer liczba) {
 		
 		Random generator = new Random();
@@ -53,7 +53,7 @@ public class GraLab02 implements Psikus {
 		}
 	}
 
-	@Override
+
 	public Integer hultajchochla(Integer liczba) throws NieudanyPsikusException {
 		Random generator = new Random();
 		int losowa = generator.nextInt(1000);	
@@ -118,7 +118,7 @@ public class GraLab02 implements Psikus {
 		}
 	}
 
-	@Override
+
 	public Integer nieksztaltek(Integer liczba) {
 		
 		Random generator = new Random();

@@ -1,4 +1,4 @@
-package zad04;
+package lab03.zad02maven;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
